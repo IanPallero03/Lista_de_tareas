@@ -245,7 +245,11 @@ body .modo-boton {
     transition: all 0.3s ease;
 }
 
-
+@media (max-width: 600px) {
+  .input-container {
+    flex-direction: column;
+  }
+}
 
 
 
