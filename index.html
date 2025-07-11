@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de tareas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <video autoplay muted loop id="video-fondo">
+        <source src="videos/tareas.mp4" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+      </video>
+
+  <div class="container">
+    <h1>Lista de tareas</h1>
+    <p id="taskCounter">Tareas pendientes: 0</p>
+    <button id="toggleHistoryButton">Historial</button>
+    
+    <div class="input-container">
+      <input type="text" id="taskInput" placeholder="Agregar nueva tarea..." />
+      <button id="addTaskButton">Agregar</button>
+    </div>
+    <ul id="taskList"></ul>
+
+<!-- SECCION DE HISTORIAL -->
+  <div id="history-container" class="history-container">
+    <h3>Historial de búsquedas</h3>
+    <ul id="history-list"></ul>
+    </div>
+  
+  
+<!-- SECCION DE NOCHE/DIA -->
+
+<button id="modo-btn" class="modo-boton">
+  <div class="material-icons">dark_mode</div>
+</button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+

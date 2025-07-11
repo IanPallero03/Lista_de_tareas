@@ -1,0 +1,259 @@
+body {
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+ 
+/* SECCION Contenedor principal */
+  
+  .container {
+    background: linear-gradient(to bottom, #78aeba, #C8E6C9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(98, 156, 218, 0.5);
+  }
+  
+  .container h1{
+    text-align: center;
+    box-shadow: 0 0 10px rgba(98, 156, 218, 0.5);
+    border-radius: 10px;
+    color: #26464d;
+    background: linear-gradient(to bottom, #78aeba, #C8E6C9);
+  }
+
+  .input-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  #taskInput {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  button:hover{
+    transform: scale(1.01);
+    transition: all 0.1s ;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  li {
+    background: linear-gradient(to bottom, #54828c, #C8E6C9);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+  
+  
+  
+  .delete-button {
+    background: rgb(36, 131, 137);
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    
+  }
+
+  /* SECCION VIDEO DE FONDO */
+
+  #video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 1;
+}
+
+
+/* seccion historial*/
+
+#history-container {
+  display: none; 
+  margin-top: 15px;
+  margin-left: 15px;
+  color: #26464d;
+  text-align: center;
+}
+
+#history-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ddd;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#history-list li:hover {
+  background: #ccc;
+}
+
+.history-delete-button {
+  background: #54828c;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+#toggleHistoryButton {
+  background: #54828c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 120px;
+  height: 30px;             
+  margin-bottom: 2rem;
+  position: relative;
+  margin-left: 10px;
+  transition: background 1s;
+  box-sizing: border-box;
+  white-space: nowrap;       
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+#toggleHistoryButton:hover {
+  background: #36616a;
+}
+
+.edit-button {
+  background: #36616a;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+
+
+li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+
+
+
+/* =========================
+   Botón de Modo Noche / Día
+   ========================= */
+   .modo-boton {
+    position: fixed;
+    top: 1rem;
+    right: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 1000;
+    color: #888888;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.modo-boton:hover {
+    transform: scale(1.1);
+}
+
+body .modo-boton {
+    color: #000000;
+}
+
+body.noche .modo-boton {
+    color: white;
+}
+
+body.noche .container,
+body.noche .container h1,
+body.noche li,
+body.noche #toggleHistoryButton {
+    background: linear-gradient(to bottom, #2a2a2b, #C8E6C9);
+}
+
+body.noche .container p,
+body.noche p,
+body.noche #history-container h3 {
+    color: white;
+}
+
+body.noche .delete-button,
+body.noche .edit-button {
+    background-color: #78aeba;
+}
+
+body.noche .history-delete-button {
+    background-color: #2a2a2b;
+}
+
+body.noche .modo-boton,
+body.noche .container,
+body.noche .container h1,
+body.noche .container p,
+body.noche li,
+body.noche .delete-button,
+body.noche .edit-button,
+body.noche .history-delete-button,
+body.noche #history-container h3,
+body.noche #toggleHistoryButton,
+body .modo-boton {
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .input-container {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
