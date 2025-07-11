@@ -187,7 +187,7 @@ li.completed span {
    .modo-boton {
     position: fixed;
     top: 1rem;
-    right: 1rem;
+    right: 0.5rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
